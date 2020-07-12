@@ -1,41 +1,43 @@
 ---
 # Display name
-title: Nelson Bighetti
+title: José Diogo Cunha
 
 # Username (this should match the folder name)
 authors:
-- admin
+- Diogo
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: Data Scientist - Problem Solver
 
 # Organizations/Affiliations
 organizations:
-- name: Stanford University
-  url: ""
+- name: Perspectum
+  url: "https://perspectum.com/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: Biomedical engineer, data scientist and wannabe artist and game developer
 
 interests:
 - Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- Biomedical Engineering
+- Virtual Reality
+- User Experience
+- Design
 
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+  - course: Msc in Biomedical Engineering and Biophysics
+    institution: University of Lisbon - Faculty of Sciences
+    year: 2018
+  - course: EIT Labelled Master in Innovation in Health Care
+    institution: Copenhagen Business School
+    year: 2017
+  - course: BSc in Biomedical Engineering and Biophysics
+    institution: University of Lisbon - Faculty of Sciences
+    year: 2016
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -44,24 +46,24 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: '#contact'  # For a direct email link, use "mailto:test@example.org".
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
+  link: 'mailto:jdiogobc@gmail.com'  # For a direct email link, use "mailto:test@example.org".
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://scholar.google.co.uk/citations?user=FJi0hCAAAAAJ
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/jdiogobc
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/jdiogocunha/
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: files/cv.pdf
+- icon: cv
+  icon_pack: ai
+  link: files/Jose_Diogo_Cunha-CV.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: ""
+email: "jdiogobc@gmail.com"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
@@ -70,6 +72,4 @@ user_groups:
 - Visitors
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Due to being extremely passionate and curious I always managed to stand out both in my work and my personal achievements. My tirelessness determination made me a good multi-tasker and an independent learner. With these characteristics, throughout my life, I managed to flex between playing music for hundreds of people, being honoured with academic awards and winning national sports competitions.

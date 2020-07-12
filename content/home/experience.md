@@ -3,7 +3,7 @@
 widget = "experience"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 40  # Order that this section will appear.
+weight = 35  # Order that this section will appear.
 
 title = "Experience"
 subtitle = ""
@@ -18,27 +18,34 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
-  title = "CEO"
-  company = "GenCoin"
-  company_url = ""
-  location = "California"
-  date_start = "2017-01-01"
+  title = "Data Scientist"
+  company = "Perspectum"
+  company_url = "www.perspectum.com"
+  location = "Oxford"
+  date_start = "2019-04-10"
   date_end = ""
   description = """
-  Responsibilities include:
-  
-  * Analysing
-  * Modelling
-  * Deploying
+  - Saved hundreds of company working hours by automating and pipelining processes that were being done manually.
+  - Developed deep-learning pipelines for image segmentation
+  - Developed tools for data-visualization that will be used across multiple teams
   """
 
 [[experience]]
-  title = "Professor"
-  company = "University X"
-  company_url = ""
-  location = "California"
-  date_start = "2016-01-01"
-  date_end = "2016-12-31"
-  description = """Taught electronic engineering and researched semiconductor physics."""
+  title = "Researcher"
+  company = "Institute of Neural Engineering - TU Graz"
+  company_url = "https://www.tugraz.at/institute/ine/home/"
+  location = "Graz - Austria"
+  date_start = "2018-01-01"
+  date_end = "2018-08-01"
+  description = """I managed my own project developing a mind-controlled game using machine learning on EEG data"""
+
+[[experience]]
+  title = "Intern - Product developer"
+  company = "Joysys"
+  company_url = "https://joysys.at/"
+  location = "Graz"
+  date_start = "2018-01-01"
+  date_end = "2018-08-01"
+  description = """Worked on the documentation, legislation and early-stage development of a medical software"""
 
 +++
