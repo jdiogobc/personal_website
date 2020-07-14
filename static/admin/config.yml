@@ -114,7 +114,7 @@ collections:
         required: false
         widget: object
         fields:
-          - label: "Upload an image named `featured.jpg/png`"
+          - label: "Upload an image named `old.jpg/png`"
             name: "filename"
             widget: "image"
             default: "featured"
@@ -182,7 +182,7 @@ collections:
         required: false
         widget: object
         fields:
-          - label: "Upload an image named `featured.jpg/png`"
+          - label: "Upload an image named `old.jpg/png`"
             name: "filename"
             widget: "image"
             default: "featured"
@@ -258,7 +258,7 @@ collections:
         required: false
         widget: object
         fields:
-          - label: "Upload an image named `featured.jpg/png`"
+          - label: "Upload an image named `old.jpg/png`"
             name: "filename"
             widget: "image"
             default: "featured"
