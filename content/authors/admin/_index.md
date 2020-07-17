@@ -71,5 +71,10 @@ user_groups:
 - Researchers
 - Visitors
 ---
+<i>"Seems like a cool idea, I think I can do it!"</i>
 
-Due to being extremely passionate and curious I always managed to stand out both in my work and my personal achievements. My tirelessness determination made me a good multi-tasker and an independent learner. With these characteristics, throughout my life, I managed to flex between playing music for hundreds of people, being honoured with academic awards and winning national sports competitions.
+This one single phrase got me not only in engineering, but also into music, extreme sports and visual arts.<br>
+My curiosity and creativity, combined with my enthusiasm to turn ideas into "things" helped me stand out both in my work and my personal projects.
+My tireless determination made me a good multi-tasker and an independent learner.<br>
+With these characteristics, throughout my life, I managed to achieve academic honours and win engineering competitions,
+but also get into activities that are not quite the engineer stereotype.

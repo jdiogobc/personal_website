@@ -4,8 +4,8 @@ summary: Weekend project on simulating liquid movement in Blender
 tags:
 - Blender
 - 3D Modelling
-- Simullation
-date: "2016-04-27T00:00:00Z"
+- Simulation
+date: "2017-04-27T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""

@@ -30,9 +30,17 @@ subtitle = ""
      tag = "Blender"
   
    [[content.filter_button]]
-     name = "VFX"
-     tag = "VFX"
+     name = "Unity"
+     tag = "Unity"
 
+   [[content.filter_button]]
+     name = "Biosignals"
+     tag = "Biosignals"
+     
+   [[content.filter_button]]
+     name = "VR"
+     tag = "VR"
+    
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.
   columns = "1"

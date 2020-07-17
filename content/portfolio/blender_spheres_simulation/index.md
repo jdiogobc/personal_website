@@ -4,8 +4,8 @@ summary: Weekend project on simulating spheres movement and collisions in Blende
 tags:
 - Blender
 - 3D Modelling
-- Simullation
-date: "2016-04-27T00:00:00Z"
+- Simulation
+date: "2017-03-27T00:00:00Z"
 
 showpicture: false
 
@@ -35,7 +35,7 @@ url_video: "https://drive.google.com/file/d/10v7biQBNXnx4KQDJLytrF-EWmryiWF1Z/vi
 slides: example
 ---
 <div style="width: 100%; position: relative; padding-bottom: 56.25%;">
-<iframe src="https://drive.google.com/file/d/10v7biQBNXnx4KQDJLytrF-EWmryiWF1Z/view" width="100%" height="100%" style="position: absolute; top: 0; left: 0;"></iframe>
+<iframe src="https://drive.google.com/file/d/10v7biQBNXnx4KQDJLytrF-EWmryiWF1Z/preview" width="100%" height="100%" style="position: absolute; top: 0; left: 0;"></iframe>
 </div>
 
 Weekend project on simulating spheres movement/collisions, and volumetric forces in Blender

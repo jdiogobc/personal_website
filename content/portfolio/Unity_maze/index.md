@@ -2,10 +2,8 @@
 title: Unity Procedurally Generated Maze
 summary: Procedurally Generated Maze created in Unity using depth first search
 tags:
-- Blender
-- 3D Modelling
-- Simullation
-date: "2016-04-27T00:00:00Z"
+- Unity
+date: "2018-11-27T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -23,7 +21,7 @@ links:
 ##url_code: ""
 #url_pdf: ""
 #url_slides: ""
-url_video: "https://drive.google.com/file/d/1khv7eJ7Ww7XCQZQOtN14aXPEzQMr6p3E/view"
+url_video: "https://drive.google.com/file/d/1suOxIbtWvBjfJXruSN6QMRr_7jiWpFZt/preview"
 
 # Slides (optional).
 #   Associate this project with Markdown slides.
@@ -38,4 +36,4 @@ slides: example
 
 Procedurally Generated Maze created in Unity using depth first search. 
 
-Soon I will add the ability to mess around with it in this website
+Soon I will add the ability to interact with it in this website.

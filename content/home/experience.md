@@ -25,8 +25,8 @@ date_format = "Jan 2006"
   date_start = "2019-04-10"
   date_end = ""
   description = """
-  - Saved hundreds of company working hours by automating and pipelining processes that were being done manually.
-  - Developed deep-learning pipelines for image segmentation
+  - Saved thousands of company working hours automating extremely laborious and complex manual processes using deep-learning applied to 3D medical Imaging
+  - Developed user-friendly API based pipelines to facilitate processes otherwise time-consuming
   - Developed tools for data-visualization that will be used across multiple teams
   """
 
