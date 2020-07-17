@@ -26,21 +26,21 @@ subtitle = ""
      tag = "*"
   
    [[content.filter_button]]
-     name = "Blender"
-     tag = "Blender"
+    name = "Biosignals"
+    tag = "Biosignals"
   
    [[content.filter_button]]
      name = "Unity"
      tag = "Unity"
-
-   [[content.filter_button]]
-     name = "Biosignals"
-     tag = "Biosignals"
-     
+             
    [[content.filter_button]]
      name = "VR"
      tag = "VR"
     
+   [[content.filter_button]]
+     name = "Blender"
+     tag = "Blender"
+         
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.
   columns = "1"
