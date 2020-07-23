@@ -14,10 +14,10 @@ image:
   show: false
 
 links:
-#- icon: twitter
-#  icon_pack: fab
-#  name: Follow
-#  url: https://twitter.com/georgecushen
+- icon: unity
+  icon_pack: fab
+  name: FullScreen Play
+  url: https://jdiogobc.github.io/procedurally_generated_maze_unity/maze_web_build/index.html
 ##url_code: ""
 #url_pdf: ""
 #url_slides: ""
@@ -30,10 +30,9 @@ url_video: "https://drive.google.com/file/d/1suOxIbtWvBjfJXruSN6QMRr_7jiWpFZt/pr
 #   Otherwise, set `slides = ""`.
 slides: example
 ---
+
 <div style="width: 100%; position: relative; padding-bottom: 56.25%;">
-<iframe src="https://drive.google.com/file/d/1suOxIbtWvBjfJXruSN6QMRr_7jiWpFZt/preview" width="100%" height="100%" style="position: absolute; top: 0; left: 0;"></iframe>
+<iframe src="https://jdiogobc.github.io/procedurally_generated_maze_unity/maze_web_build/index.html" width="100%" height="100%" style="position: absolute; top: 0; left: 0;"></iframe>
 </div>
 
-Procedurally Generated Maze created in Unity using depth first search. 
-
-Soon I will add the ability to interact with it in this website.
+Procedurally Generated Maze created in Unity using depth first search. (The animation is cancelled for big mazes)
