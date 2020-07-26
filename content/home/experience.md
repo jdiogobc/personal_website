@@ -46,7 +46,7 @@ date_format = "Jan 2006"
   location = "Graz - Austria"
   date_start = "2018-02-01"
   date_end = "2018-08-01"
-  description = """Worked on the documentation, legislation and early-stage development of a medical software"""
+  description = """Worked on the documentation, legislation and early-stage development of medical software"""
 
 [[experience]]
   title = "Product management internship"
