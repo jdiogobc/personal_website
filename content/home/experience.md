@@ -21,7 +21,7 @@ date_format = "Jan 2006"
   title = "Data Scientist"
   company = "Perspectum"
   company_url = "www.perspectum.com"
-  location = "Oxford"
+  location = "Oxford - UK"
   date_start = "2019-04-10"
   date_end = ""
   description = """
@@ -31,21 +31,31 @@ date_format = "Jan 2006"
   """
 
 [[experience]]
-  title = "Researcher"
+  title = "Researcher - Intern"
   company = "Institute of Neural Engineering - TU Graz"
   company_url = "https://www.tugraz.at/institute/ine/home/"
   location = "Graz - Austria"
-  date_start = "2018-01-01"
+  date_start = "2018-01-03"
   date_end = "2018-08-01"
   description = """I managed my own project developing a mind-controlled game using machine learning on EEG data"""
 
 [[experience]]
-  title = "Intern - Product developer"
+  title = "Product developer - Part-time"
   company = "Joysys"
   company_url = "https://joysys.at/"
-  location = "Graz"
-  date_start = "2018-01-01"
+  location = "Graz - Austria"
+  date_start = "2018-02-01"
   date_end = "2018-08-01"
   description = """Worked on the documentation, legislation and early-stage development of a medical software"""
+
+[[experience]]
+  title = "Product management internship"
+  company = "Glintt"
+  company_url = "https://www.glintt.com/en/Pages/home.aspx"
+  location = "Lisbon - Portugal"
+  date_start = "2017-08-10"
+  date_end = "2016-11-01"
+  description = """During this internship I shadowed and collaborated with product managers during the implementation of
+  a medical software in a clinical environment"""
 
 +++
