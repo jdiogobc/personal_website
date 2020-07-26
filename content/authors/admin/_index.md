@@ -73,8 +73,7 @@ user_groups:
 ---
 <i>"Seems like a cool idea, I think I can do it!"</i>
 
-This one single phrase got me not only in engineering, but also into music, extreme sports and visual arts.<br>
-My curiosity and creativity, combined with my enthusiasm to turn ideas into "things" helped me stand out both in my work and my personal projects.
-My tireless determination made me a good multi-tasker and an independent learner.<br>
+This one single phrase got me not only into engineering, but also into music, extreme sports and visual arts.<br>
+Curiosity, creativity and enthusiasm helped me turning ideas into "things" which made me stand out both in my work and my personal projects.
 With these characteristics, throughout my life, I managed to achieve academic honours and win engineering competitions,
 but also get into activities that are not quite the engineer stereotype.

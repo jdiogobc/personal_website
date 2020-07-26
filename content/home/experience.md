@@ -27,7 +27,7 @@ date_format = "Jan 2006"
   description = """
   - Saved thousands of company working hours automating extremely laborious and complex manual processes using deep-learning applied to 3D medical Imaging
   - Developed user-friendly API based pipelines to facilitate processes otherwise time-consuming
-  - Developed tools for data-visualization that will be used across multiple teams
+  - Developed tools for data-visualization that are used across multiple teams
   """
 
 [[experience]]
@@ -56,6 +56,6 @@ date_format = "Jan 2006"
   date_start = "2017-08-10"
   date_end = "2016-11-01"
   description = """During this internship I shadowed and collaborated with product managers during the implementation of
-  a medical software in a clinical environment"""
+  medical software in a clinical environment"""
 
 +++

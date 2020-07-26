@@ -35,5 +35,5 @@ slides: example
 <iframe src="https://drive.google.com/file/d/1qGJGquJnKSXV_Xf8Nju4zv4R-RrLP70W/preview" width="100%" height="100%" style="position: absolute; top: 0; left: 0;"></iframe>
 </div>
 
-<a href="ines-almeida.com">Inês Almeida</a> and I are currently developing a VR video-game that has boomerang throwing as its main mechanic.
+<a href="https://ines-almeida.com">Inês Almeida</a> and I are currently developing a VR video-game that has boomerang throwing as its main mechanic.
 The boomerangs return using a automatically generated Bézier curve too look smooth and feel nice.
