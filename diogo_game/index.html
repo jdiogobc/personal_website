@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diogo - The Game</title>
+
+    <!-- Bootstrap Style -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <!-- Comming here is a bit of cheating, but I guess it's fair enough. I'll let it slide this level! -->
+    <div class="container">
+        <h1>Diogo Cunha</h1>
+        <h2>What do they know? Do they know things? Let's find out!</h2>
+        <div class="content">
+            <p>
+                Let's go into one of Diogo's biggest struggles and puzzles:<br>
+                Writting his own name in a form.<br><br>
+            </p>
+            <label for="name">Full name:</label>
+            <input id="name" name="name" style="width: 60%">
+        </div>    
+        <div style="visibility: hidden" id="go">
+            <a href="NOTfirstlevel.html"><button id='start_button'>START</button></a>
+        </div>
+    </div>
+    <p class="hidden-text hidden-blue">The full name is 2 first names, 4 last names, and a total of 8 words.</p>
+</body>
+
+<script>
+    document.getElementById("name").onkeyup = function() { 
+        var name = document.getElementById("name").value
+
+        // These are all the acceptable answers, enjoy :)
+        var acceptable_answers = [
+            "josé diogo marques da silva branco da cunha",
+            "jose diogo marques da silva branco da cunha",
+            "josé diogo marques silva branco cunha",
+            "jose diogo marques silva branco cunha"
+        ]
+
+        if (acceptable_answers.indexOf(name.toLowerCase()) >= 0) {
+            document.getElementById("go").style.visibility = "visible";
+        }
+    };
+</script>
+
+<script>
+    document.body.style.backgroundImage = "url('images/diogos_bg8.png')";
+    document.body.style.backgroundSize = "cover";
+    number = 0;
+    window.setInterval(function(){  
+        number++;
+        document.body.style.backgroundImage = "url('images/diogos_bg" + number + ".png')";
+        if (number == 8){
+            number = 0;
+        }
+    }, 500);
+</script>
+
+<!-- Bootstrap Javascript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</html>

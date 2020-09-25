@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Level 12</title>
+
+    <!-- Bootstrap Style -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <div class="container">
+        <div class="piece"><img src="images/f/f12.png" alt="piece" width="100%"></div>
+        <h1>Level 12</h1>
+        <div class="content">
+            <h3>Which 5 of these ingredients are part of Diogo’s family special dish?</h3>
+            <div class="row" style="padding-top: 30px">
+                <div class="col-md-4">
+                    <input type="checkbox" id="ing1" name="ing1" value="ing1" onclick="validate()">
+                    <label for="ing1">Eggs</label>
+                    <br>
+                    <input type="checkbox" id="ing2" name="ing2" value="ing2" onclick="validate()">
+                    <label for="ing2">Mustard</label>
+                    <br>
+                    <input type="checkbox" id="ing3" name="ing3" value="ing3" onclick="validate()">
+                    <label for="ing3">Bacon</label>
+                    <br>
+                    <input type="checkbox" id="ing4" name="ing4" value="ing4" onclick="validate()">
+                    <label for="ing4">Bechamel Sauce</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="checkbox" id="ing5" name="ing5" value="ing5" onclick="validate()">
+                    <label for="ing5">Chicken</label>
+                    <br>
+                    <input type="checkbox" id="ing6" name="ing6" value="ing6" onclick="validate()">
+                    <label for="ing6">Beef</label>
+                    <br>
+                    <input type="checkbox" id="ing7" name="ing7" value="ing7" onclick="validate()">
+                    <label for="ing7">Carrots</label>
+                    <br>
+                    <input type="checkbox" id="ing8" name="ing8" value="ing8" onclick="validate()">
+                    <label for="ing8">Cream</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="checkbox" id="ing9" name="ing9" value="ing9" onclick="validate()">
+                    <label for="ing9">Tomato</label>
+                    <br>
+                    <input type="checkbox" id="ing10" name="ing10" value="ing10" onclick="validate()">
+                    <label for="ing10">Crisps</label>
+                    <br>
+                    <input type="checkbox" id="ing11" name="ing11" value="ing11" onclick="validate()">
+                    <label for="ing11">Pasta</label>
+                    <br>
+                    <input type="checkbox" id="ing12" name="ing12" value="ing12" onclick="validate()">
+                    <label for="ing12">Mayo</label>
+                </div>
+            </div>
+            <div style="visibility: hidden; text-align: right;" id="nextlevel">
+                <a href="level13.html"><button id='start_button'>Next Level</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function validate() { 
+        var inputs = document.getElementsByTagName('input');
+        var valid = true;
+        var correct_ings = ["ing2", "ing4", "ing5", "ing8", "ing10"]
+        for(var x = 0; x < inputs.length; x++) {
+            if (correct_ings.indexOf(inputs[x].name) >= 0) {
+                if (!inputs[x].checked) {
+                    return;
+                }
+            } else {
+                if (inputs[x].checked) {
+                    return;
+                }
+            }
+        }
+        document.getElementById("nextlevel").style.visibility = "visible";
+    };
+</script>
+
+<!-- Bootstrap Javascript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</html>

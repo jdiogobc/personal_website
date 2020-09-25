@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>25</title>
+
+    <!-- Bootstrap Style -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+        .blinking{
+        animation:blinkingText 0.5s infinite;
+        }
+        @keyframes blinkingText{
+            0%{     color: dodgerblue; }
+            49%{    color: dodgerblue; }
+            60%{    color: transparent; }
+            99%{    color: transparent; }
+            100%{   color: dodgerblue; }
+        }
+
+        .container:last-of-type {
+            margin-bottom: 100px;
+        }
+
+        #confetti {
+            opacity: 1;
+            transition: opacity 2s; 
+        }
+
+        #confetti.fade {
+            opacity: 0;
+        }
+
+</style>
+
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0"></script>
+
+    <img id="confetti" src="images/confetti.gif" alt="confetti" style="opacity: 0.7; width: 110%; position: fixed; top: 0px; visibility: hidden">
+    <div class="container" style="padding-bottom: 2%">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="content">
+                    <h1>Final Level</h1>
+                    <div style="padding-top: 30px">
+                        <label for="code">Solve the puzzle:</label>
+                        <input id="code" name="code" style="width: 60%">
+                        <div style="text-align: right; display: inline-block" id="nextlevel">
+                            <a href="pieces.html" target="_blank"><button>Pieces</button></a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="col-md-4" style="text-align: center;">
+                <h1 style="color: dodgerblue; font-size: 120pt">25</h1>
+            </div>
+        </div>
+        <div id="youwon" class="blinking" style="visibility: hidden; padding-top: 50px; text-align: center;">
+            <h1 style="font-size: 100px;">YOU WON!</h1>
+        </div>
+
+        <div id="arrow" style="visibility: hidden; text-align: right;">
+            <img src="images/arrow.gif" alt="arrow down" style="height: 80px">
+        </div>
+    </div>
+
+    <div class="afterwin container" style="display: none">
+        <h1>Leave a comment for Diogo and ask him about all his life choices</h1>
+        <div class="fb-comments" data-href="https://diogo-cunha.com" data-numposts="10" data-width="100%"></div>
+    </div>
+
+    <div class="afterwin container" style="display: none; vertical-align: middle; text-align: center;">
+            <div id="nextlevel" style="margin-top: 80px;">
+                <a href="https://zoom.us/j/95632634747?pwd=NTJFMVVqc2J0LzdRK0kvVmpjWXNoQT09" target="_blank"><button id='start_button' style="font-size: 50pt">Happy Birthday</button></a>
+            </div>
+        </div>
+        <!-- <p>
+            Topic: Happy Birthday to Diogo!<br>
+            Time: Apr 26, 2020 11:30 AM Lisbon<br>
+            <br>
+            Meeting ID: 956 3263 4747<br>
+            Password: diogo<br>
+        </p> -->
+    </div>
+</body>
+
+<script>
+    document.getElementById("code").onkeyup = function() { 
+        var name = document.getElementById("code").value
+
+        // These are all the acceptable answers, enjoy :)
+        var acceptable_answers = [
+            "hail the hat",
+            "hailthehat",
+        ]
+
+        if (acceptable_answers.indexOf(name.toLowerCase().trim()) >= 0) {
+            document.getElementById("youwon").style.visibility = "visible";
+            var confetti = document.getElementById("confetti");
+            confetti.style.visibility = "visible";
+
+            var afterwin_containers = document.getElementsByClassName("afterwin");
+            for (var i = 0; i < afterwin_containers.length; i++){
+                afterwin_containers[i].style.display = "block";
+            }
+            
+            setTimeout(function(){
+                document.getElementById("arrow").style.visibility = "visible";
+            }, 3000);
+
+            setTimeout(function(){
+                $("#confetti").fadeIn();
+            }, 4000);
+            setTimeout(function(){
+                confetti.style.visibility = "hidden";
+            }, 6000);
+
+            document.body.style.backgroundImage = "url('images/diogos_bg8.png')";
+            document.body.style.backgroundSize = "repeat";
+            number = 0;
+            window.setInterval(function(){  
+                number++;
+                document.body.style.backgroundImage = "url('images/diogos_bg" + number + ".png')";
+                if (number == 8){
+                    number = 0;
+                }
+            }, 600);    
+        }
+    };
+</script>
+
+<!-- Bootstrap Javascript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</html>

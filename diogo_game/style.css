@@ -1,0 +1,190 @@
+body {
+  background-color: #9BBDE0;
+}
+
+.container {
+    margin-top: 100px;
+    padding: 5%;
+    height: 100%;
+    width: 70%;
+    background-color: white;
+    border-radius: 15px;
+    min-height: 500px;
+    -webkit-box-shadow: 8px 8px 15px 1px rgba(41,41,41,0.58);
+    -moz-box-shadow: 8px 8px 15px 1px rgba(41,41,41,0.58);
+    box-shadow: 8px 8px 15px 1px rgba(41,41,41,0.58);
+}
+
+.content {
+    margin-top: 60px;
+}
+
+#go {
+    text-align: center;
+    padding: 40px;
+}
+
+#start_button {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    color: white;
+    background-color: #9BBDE0;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 24px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+#start_button:hover {background-color: dodgerblue}
+
+#start_button:active {
+  background-color: dodgerblue;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.hidden-text {
+    color: #fafafa;
+    padding-top: 20px;
+}
+
+.hidden-blue {
+    color: #aac6e3;
+}
+
+.hidden-text a{
+    color: #f8f8f8;
+}
+
+ul {
+  max-width: 80%;
+  padding-top: 10px;
+}
+
+li {
+  text-decoration: none;
+  background-color: #eee;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  list-style-type: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+li:hover {
+  background-color: #ddd;
+}
+
+li a {
+  color: black;
+}
+
+li a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.options {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.artist-image {
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+}
+
+.artist-image img {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.animate{
+  position: fixed;
+}
+
+#failed_diogos_bottom {
+  height: 500px;
+  position: fixed;
+  top: 250px;
+}
+
+#failed_diogos_top {
+  height: 500px;
+  position: fixed;
+  top: 0px;
+}
+
+.animate{
+  position: fixed;
+}
+
+.image_choice {
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+  opacity: 0.8;
+  margin: 10px;
+}
+
+.image_choice:hover {
+  opacity: 1;
+}
+
+.piece {
+  width: 40px; 
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
+}
+
+h1:first-of-type {
+  display: inline-block;
+}
+
+/* SLIDER */
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+    padding-top: 40px;
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: dodgerblue; /* Blue background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: dodgerblue; /* Blue background */
+    cursor: pointer; /* Cursor on hover */
+  }
