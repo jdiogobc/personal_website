@@ -1,5 +1,5 @@
 [build]
-  command = "hugo --gc --minify -b $URL; cp -r diogo_game public ; cp -r asd public"
+  command = "hugo --gc --minify -b $URL; cp -r diogo_game public ; cp -r tenho_saudades public"
   publish = "public"
 
 [build.environment]
