@@ -23,7 +23,7 @@ date_format = "Jan 2006"
   company_url = "www.perspectum.com"
   location = "Oxford - UK"
   date_start = "2019-04-10"
-  date_end = ""
+  date_end = "2021-01-01"
   description = """
   - Saved thousands of company working hours automating extremely laborious and complex manual processes using deep-learning applied to 3D medical Imaging
   - Developed user-friendly API based pipelines to facilitate processes otherwise time-consuming
