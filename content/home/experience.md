@@ -18,6 +18,19 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
+  title = "Indie VR Game Developer"
+  company = "Self-Employed"
+  #company_url = "www.perspectum.com"
+  location = "Spelkollektivet - Sweden"
+  date_start = "2021-01-15"
+  date_end = ""
+  description = """
+  - I am the main developer and techincal artist in a team of 2 developing a VR game
+  - I am learning a lot about how to make a project time-efficient, both in the art and code department. 
+  """
+
+
+[[experience]]
   title = "Data Scientist"
   company = "Perspectum"
   company_url = "www.perspectum.com"
@@ -25,7 +38,7 @@ date_format = "Jan 2006"
   date_start = "2019-04-10"
   date_end = "2021-01-01"
   description = """
-  - Saved thousands of company working hours automating extremely laborious and complex manual processes using deep-learning applied to 3D medical Imaging
+  - Using deep-learning applied to 3D medical Imaging to automate extremely laborious and complex manual processes, I saved thousands of company working hours. 
   - Developed user-friendly API based pipelines to facilitate processes otherwise time-consuming
   - Developed tools for data-visualization that are used across multiple teams
   """
@@ -46,7 +59,7 @@ date_format = "Jan 2006"
   location = "Graz - Austria"
   date_start = "2018-02-01"
   date_end = "2018-08-01"
-  description = """Worked on the documentation, legislation and early-stage development of medical software"""
+  description = """Worked on the documentation, legislation and early-stage development of a medical software that used cardiac data to create a personalized music playlist"""
 
 [[experience]]
   title = "Product management internship"

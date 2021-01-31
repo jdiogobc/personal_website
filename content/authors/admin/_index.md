@@ -13,9 +13,9 @@ superuser: true
 role: Data Scientist - Problem Solver
 
 # Organizations/Affiliations
-organizations:
-- name: Perspectum
-  url: "https://perspectum.com/"
+#organizations:
+#- name: Perspectum
+#  url: "https://perspectum.com/"
 
 # Short bio (displayed in user profile at end of posts)
 bio: Biomedical engineer, data scientist and wannabe artist and game developer
@@ -71,7 +71,7 @@ user_groups:
 - Researchers
 - Visitors
 ---
-<i>"Seems like a cool idea, I think I can do it!"</i>
+<i>"Seems like a fun idea, I think I can do it!"</i>
 
 This one single phrase got me not only into engineering, but also into music, extreme sports and visual arts.<br>
 Curiosity, creativity and enthusiasm helped me turning ideas into "things" which made me stand out both in my work and my personal projects.
