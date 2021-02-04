@@ -25,7 +25,7 @@ date_format = "Jan 2006"
   date_start = "2021-01-15"
   date_end = ""
   description = """
-  - I am the main developer and techincal artist in a team of 2 developing a VR game
+  - I am the main developer and technical artist in a team of 2 developing a VR game
   - I am learning a lot about how to make a project time-efficient, both in the art and code department. 
   """
 
