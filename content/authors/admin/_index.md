@@ -47,7 +47,7 @@ social:
 
 - icon: beer
   icon_pack: fa
-  link: https://scholar.google.co.uk/citations?user=FJi0hCAAAAAJ
+  link: https://beersandboomerangs.com/
 - icon: envelope
   icon_pack: fas
   link: 'mailto:jdiogobc@gmail.com'  # For a direct email link, use "mailto:test@example.org".
