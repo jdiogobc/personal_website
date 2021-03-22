@@ -1,5 +1,5 @@
 ---
-title: Australian BBQ - VR game
+title: Beers & Boomerangs - VR game
 summary: VR game where you throw boomerangs at kangaroos to save your BBQ!
 tags:
 - Unity
@@ -8,7 +8,7 @@ tags:
 date: "2021-01-31T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
-external_link: ""
+external_link: "https://beersandboomerangs.com/"
 
 image:
   caption:
@@ -16,10 +16,10 @@ image:
   show: false
 
 links:
-#- icon: twitter
-#  icon_pack: fab
-#  name: Follow
-#  url: https://twitter.com/georgecushen
+- icon: twitter
+  icon_pack: fab
+  name: Follow
+  url: "https://twitter.com/jdiogobc"
 ##url_code: ""
 #url_pdf: ""
 #url_slides: ""

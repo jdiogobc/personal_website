@@ -19,9 +19,9 @@ links:
 - icon: newspaper
   icon_pack: fas
   name: ROI
-  url: https://ieeexplore.ieee.org/document/8590076/metrics#metrics
+  url: https://ieeexplore.ieee.org/document/9371701
 ##url_code: ""
-url_pdf: "https://repositorio.ul.pt/bitstream/10451/36308/1/ulfc_124712_tm_Jos%c3%a9_Diogo_Cunha.pdf"
+url_pdf: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9371701"
 #url_slides: ""
 #url_video: "https://drive.google.com/file/d/1fXIYTi4KpqsMN1H24tNFt8GaeNPanmIq/view"
 

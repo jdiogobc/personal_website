@@ -20,7 +20,7 @@ date_format = "Jan 2006"
 [[experience]]
   title = "Indie VR Game Developer"
   company = "Self-Employed"
-  #company_url = "www.perspectum.com"
+  company_url = "https://beersandboomerangs.com"
   location = "Spelkollektivet - Sweden"
   date_start = "2021-01-15"
   date_end = ""
