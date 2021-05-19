@@ -20,6 +20,12 @@ links:
   icon_pack: fab
   name: Follow
   url: "https://twitter.com/BeersBoomerangs"
+
+- icon: globe
+  icon_pack: fas
+  name: Website
+  url: "https://beersandboomerangs.com/"
+
 ##url_code: ""
 #url_pdf: ""
 #url_slides: ""
