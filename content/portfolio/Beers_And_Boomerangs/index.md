@@ -8,7 +8,7 @@ tags:
 date: "2021-01-31T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
-# external_link: "https://beersandboomerangs.com/"
+external_link: "https://beersandboomerangs.com/"
 
 image:
   caption:
@@ -18,18 +18,38 @@ image:
 links:
 - icon: twitter
   icon_pack: fab
-  name: Follow
+  name: 
   url: "https://twitter.com/BeersBoomerangs"
+
+- icon: reddit
+  icon_pack: fab
+  name:
+  url: "https://www.reddit.com/r/BeersAndBoomerangs/"  
 
 - icon: globe
   icon_pack: fas
-  name: Website
+  name:
   url: "https://beersandboomerangs.com/"
+
+- icon: discord
+  icon_pack: fab
+  name: Join
+  url: "https://discord.gg/KtJwDfvhfX"
+
+- icon: steam
+  icon_pack: fab
+  name: Wishlist
+  url: "https://store.steampowered.com/app/1588610/Beers_and_Boomerangs_VR/?utm_source=website"
+
+- icon: vr-cardboard
+  icon_pack: fas
+  name: AppLab
+  url: "https://www.oculus.com/experiences/quest/6119653444774535/?utm_source=website"
 
 ##url_code: ""
 #url_pdf: ""
 #url_slides: ""
-url_video: "https://drive.google.com/file/d/1RneqV2Enc0mX1oofCkjqMVxjl6yNPGQp/preview"
+url_video: "https://www.youtube.com/watch?v=MCYz65nNtno"
 
 # Slides (optional).
 #   Associate this project with Markdown slides.
