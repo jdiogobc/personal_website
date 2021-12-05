@@ -17,11 +17,12 @@ date_format = "Jan 2006"
 #   Required fields are `title`, `company`, and `date_start`.
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
+
 [[experience]]
   title = "Indie VR Game Developer"
-  company = "Self-Employed"
+  company = "Beers and Boomerangs"
   company_url = "https://beersandboomerangs.com"
-  location = "Spelkollektivet - Sweden"
+  location = "Lisbon - Portugal"
   date_start = "2021-01-15"
   date_end = ""
   description = """
