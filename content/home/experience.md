@@ -19,15 +19,28 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[experience]]
-  title = "Indie VR Game Developer"
-  company = "Beers and Boomerangs"
+  title = "Mixed Reality Prototyper & Unity Developer"
+  company = "Meta"
+  company_url = "https://about.meta.com/"
+  location = "Zurich - Switzerland"
+  date_start = "2023-02-06"
+  date_end = ""
+  description = """
+  - Developing XR prototypes for Reality labs 
+  """
+
+[[experience]]
+  title = "VR Game Developer + Co-founder"
+  company = "Witty Platypus"
   company_url = "https://beersandboomerangs.com"
   location = "Lisbon - Portugal"
   date_start = "2021-01-15"
   date_end = ""
   description = """
-  - I am the main developer and technical artist in a team of 2 developing a VR game
-  - I am learning a lot about how to make a project time-efficient, both in the art and code department. 
+  - I was the main developer and technical artist in the team of 2 that developed Beers and Boomerangs
+  - Published the game in 5 Platforms (Oculus, Pico, Steam, iQIYI, HTC)
+  - Ported it to both PCVR and Standalone
+  - Co-Founded the company
   """
 
 
