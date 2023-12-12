@@ -26,7 +26,9 @@ date_format = "Jan 2006"
   date_start = "2023-02-06"
   date_end = ""
   description = """
-  - Developing XR prototypes for Reality labs 
+  - Developing XR prototypes for Reality labs
+  - In less that 6 months in the company, I designed and developed a MR Co-presence technology that is being patented
+  - Demoed mine and other projects to Meta's leadership, including the CTO 
   """
 
 [[experience]]
@@ -35,12 +37,13 @@ date_format = "Jan 2006"
   company_url = "https://beersandboomerangs.com"
   location = "Lisbon - Portugal"
   date_start = "2021-01-15"
-  date_end = ""
+  date_end = "2023-11-22"
   description = """
-  - I was the main developer and technical artist in the team of 2 that developed Beers and Boomerangs
-  - Published the game in 5 Platforms (Oculus, Pico, Steam, iQIYI, HTC)
-  - Ported it to both PCVR and Standalone
-  - Co-Founded the company
+  - Main developer and technical artist in the team of 2 that developed Beers and Boomerangs
+  - Nominee for Best Game in IGN's Rogue Jam.
+  - Best Internation Indie Game at PGA awards.
+  - Published the game on 5 Platforms (Oculus, Pico, Steam, iQIYI, HTC)
+  - Co-Founded the company 
   """
 
 
