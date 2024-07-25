@@ -27,7 +27,7 @@ date_format = "Jan 2006"
   date_end = ""
   description = """
   - Developing XR prototypes for Reality labs
-  - In less that 6 months in the company, I designed and developed a MR Co-presence technology that is being patented
+  - In less than 6 months in the company, I designed and developed a MR Co-presence technology that is being patented
   - Demoed mine and other projects to Meta's leadership, including the CTO 
   """
 
@@ -55,8 +55,8 @@ date_format = "Jan 2006"
   date_start = "2019-04-10"
   date_end = "2021-01-01"
   description = """
-  - Using deep-learning applied to 3D medical Imaging to automate extremely laborious and complex manual processes, I saved thousands of company working hours. 
-  - Developed user-friendly API based pipelines to facilitate processes otherwise time-consuming
+  - Using deep-learning (U-net) applied to 3D medical Imaging to automate extremely laborious and complex manual processes, I saved thousands of company working hours. 
+  - Developed user-friendly pipelines to facilitate processes otherwise time-consuming
   - Developed tools for data-visualization that are used across multiple teams
   """
 
@@ -67,7 +67,10 @@ date_format = "Jan 2006"
   location = "Graz - Austria"
   date_start = "2018-01-03"
   date_end = "2018-08-01"
-  description = """I managed my own project developing a mind-controlled game using machine learning on EEG data"""
+  description = """
+  - I designed and managed a project that used live machine learning on EEG data to control a video game.
+  - Published two papers out of the results of this 8-month project
+  """
 
 [[experience]]
   title = "Product developer - Part-time"
