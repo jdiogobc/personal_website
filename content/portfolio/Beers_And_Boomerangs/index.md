@@ -3,7 +3,7 @@ title: Beers & Boomerangs - VR game
 summary: VR game where you throw boomerangs at kangaroos to save your BBQ!
 tags:
 - Unity
-- VR
+- XR
 - Blender
 date: "2021-01-31T00:00:00Z"
 

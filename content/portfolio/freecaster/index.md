@@ -3,7 +3,7 @@ title: Free-caster - VR, Biomarker-controlled, handtracking game
 summary: VR game that uses hand tracking and biomarkers to play
 tags:
 - Unity
-- VR
+- XR
 - Biosignals
 date: "2017-05-01T00:00:00Z"
 
