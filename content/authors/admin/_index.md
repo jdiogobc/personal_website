@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Data Scientist - Problem Solver
+role: XR developer - Problem Solver
 
 # Organizations/Affiliations
 #organizations:
@@ -18,14 +18,13 @@ role: Data Scientist - Problem Solver
 #  url: "https://perspectum.com/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Biomedical engineer, data scientist and wannabe artist and game developer
+bio: Biomedical engineer, XR developer and wannabe artist and game developer
 
 interests:
-- Artificial Intelligence
 - Biomedical Engineering
-- Virtual Reality
-- User Experience
-- Design
+- Mixed Reality
+- Interaction Design
+- Artificial Intelligence
 
 education:
   courses:
