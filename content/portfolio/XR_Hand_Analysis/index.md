@@ -34,8 +34,8 @@ url_video: "https://drive.google.com/file/d/10toMtTQgXU9NAdHYmJQS8nExjmy6HVa-/vi
 #   Otherwise, set `slides = ""`.
 slides: example
 ---
-When a dear friend had their hand movement impaired, they couldn't believe their hand was having a slow and steady recovery.
-I jumped on the opportunity to assure them that there was a qualitatively measurable improvement in their hand movement. 
+When a dear friend had their hand movement impaired, they couldn't believe their hand was having a slow and steady recovery.<br><br>
+I jumped on the opportunity to assure them that there was a qualitatively measurable improvement in their hand movement. <br><br>
 I hold this project very dearly as I managed to have some real-world direct impact with a technology that is frequently so forward looking that it misses its own present potential.
 
 <div style="width: 100%; position: relative; padding-bottom: 56.25%;">
