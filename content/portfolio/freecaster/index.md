@@ -3,7 +3,7 @@ title: Free-caster - VR, Biomarker-controlled, handtracking game
 summary: VR game that uses hand tracking and biomarkers to play
 tags:
 - Unity
-- VR
+- XR
 - Biosignals
 date: "2017-05-01T00:00:00Z"
 
@@ -33,7 +33,7 @@ url_video: "https://drive.google.com/file/d/1fXIYTi4KpqsMN1H24tNFt8GaeNPanmIq/vi
 slides: example
 ---
 <div style="width: 100%; position: relative; padding-bottom: 56.25%;">
-<iframe src="https://drive.google.com/file/d/1fXIYTi4KpqsMN1H24tNFt8GaeNPanmIq/preview" width="100%" height="100%" style="position: absolute; top: 0; left: 0;"></iframe>
+<iframe src="https://drive.google.com/file/d/1OmWsPalO50C2Jyc5dFUoDzW7FXDdfAq-/preview" width="100%" height="100%" style="position: absolute; top: 0; left: 0;"></iframe>
 </div>
 
 This was a 2 month project, in collaboration with José Franco. We developed a game using LeapMotion for hand tracking,

@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Data Scientist - Problem Solver
+role: XR developer - Problem Solver
 
 # Organizations/Affiliations
 #organizations:
@@ -18,14 +18,13 @@ role: Data Scientist - Problem Solver
 #  url: "https://perspectum.com/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Biomedical engineer, data scientist and wannabe artist and game developer
+bio: Biomedical engineer, XR developer and wannabe artist and game developer
 
 interests:
-- Artificial Intelligence
 - Biomedical Engineering
-- Virtual Reality
-- User Experience
-- Design
+- Mixed Reality
+- Interaction Design
+- Artificial Intelligence
 
 education:
   courses:
@@ -79,9 +78,5 @@ user_groups:
 - Researchers
 - Visitors
 ---
-<i>"Seems like a fun idea, I think I can do it!"</i>
-
-This one single phrase got me not only into engineering, but also into music, extreme sports and visual arts.<br>
-Curiosity, creativity and enthusiasm helped me turning ideas into "things" which made me stand out both in my work and my personal projects.
-With these characteristics, throughout my life, I managed to achieve academic honours and win engineering competitions,
-but also get into activities that are not quite the engineer stereotype.
+Biomedical engineer, that accidentally became an XR developer. Creativity and enthusiasm helped
+me turn ideas into “things”. Striving to be a better engineer, colleague and leader

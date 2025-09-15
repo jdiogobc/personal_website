@@ -34,8 +34,8 @@ subtitle = ""
      tag = "Unity"
              
    [[content.filter_button]]
-     name = "VR"
-     tag = "VR"
+     name = "XR"
+     tag = "XR"
     
    [[content.filter_button]]
      name = "Blender"
