@@ -26,7 +26,7 @@ date_format = "Jan 2006"
   date_start = "2025-06-15"
   date_end = ""
   description = """
-  - Developing an XR application to train surgeons" 
+  - Leading a team of academic researchers and engineers to develop an XR app to train surgeons 
   """
 [[experience]]
   title = "Mixed Reality Prototyper & Unity Developer"
