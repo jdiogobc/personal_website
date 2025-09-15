@@ -19,12 +19,22 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[experience]]
+  title = "Technical Team Lead"
+  company = "UZH - Balgrist"
+  company_url = "https://rocs.balgrist.ch/en/"
+  location = "Zurich - Switzerland"
+  date_start = "2025-06-15"
+  date_end = ""
+  description = """
+  - Developing an XR application to train surgeons" 
+  """
+[[experience]]
   title = "Mixed Reality Prototyper & Unity Developer"
   company = "Meta"
   company_url = "https://about.meta.com/"
   location = "Zurich - Switzerland"
   date_start = "2023-02-06"
-  date_end = ""
+  date_end = "2025-01-01"
   description = """
   - Developing XR prototypes for Reality labs
   - In less than 6 months in the company, I designed and developed a MR Co-presence technology that is being patented
