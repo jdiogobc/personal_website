@@ -41,7 +41,7 @@ subtitle = ""
 [[feature]]
   icon = "brain"
   icon_pack = "fas"
-  name = "Machine Leaning"
+  name = "Machine Learning"
   description = ""
 
 [[feature]]

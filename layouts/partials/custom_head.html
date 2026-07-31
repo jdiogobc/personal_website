@@ -1,0 +1,132 @@
+{{/* Site-specific <head> additions. Included by `partials/site_head.html`. */}}
+
+{{/* Resolve the active colour theme so the CSS below can reuse its primary colour,
+     the same way `themes/academic/layouts/partials/functions/parse_theme.html` does. */}}
+{{ $theme_name := site.Params.theme | default "minimal" }}
+{{ $theme := index site.Data.themes $theme_name }}
+{{ $primary := $theme.primary | default "#66a1aa" }}
+
+<style>
+  /* ---------------------------------------------------------------
+     Homepage section rhythm
+     --------------------------------------------------------------- */
+
+  /* The theme ships 110px top and bottom, i.e. 220px of empty space between
+     every section, which reads as dead space rather than breathing room.
+     `.home-section:first-of-type` keeps its own 50px top override. */
+  .home-section {
+    padding: 70px 0 70px 0;
+  }
+
+  /* ---------------------------------------------------------------
+     About widget: Interests / Work / Education
+     Markup comes from `layouts/partials/widgets/about.html`.
+     --------------------------------------------------------------- */
+
+  .about-details .about-block {
+    margin-bottom: 1.75rem;
+  }
+
+  /* Don't add trailing space below the last row - the section's own bottom
+     padding already provides it. */
+  .about-details > .row:last-child .about-block {
+    margin-bottom: 0;
+  }
+
+  .about-details .about-block > ul:last-child {
+    margin-bottom: 0;
+  }
+
+  .about-details h3 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .dark .about-details h3 {
+    border-bottom-color: rgba(255, 255, 255, 0.15);
+  }
+
+  /* Interests: pills instead of a bulleted list, so long labels stop
+     wrapping mid-phrase in a narrow column. */
+  .about-details ul.ul-interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .about-details ul.ul-interests li {
+    font-size: 0.85rem;
+    line-height: 1.2;
+    padding: 0.4rem 0.85rem;
+    border: 1px solid {{ $primary }};
+    border-radius: 2rem;
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+
+  .dark .about-details ul.ul-interests li {
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+
+  /* Work / Education entries. Font Awesome's `fa-ul`/`fa-li` pair positions the
+     icon absolutely in a hanging indent; flex keeps it aligned with the title
+     instead, and avoids the indent eating horizontal space. */
+  .about-details ul.ul-edu {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .about-details ul.ul-edu li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    padding: 0 0 0.9rem 0;
+  }
+
+  .about-details ul.ul-edu li:last-child {
+    padding-bottom: 0;
+  }
+
+  .about-details ul.ul-edu li i.fa-li {
+    position: static;
+    left: auto;
+    top: auto;
+    width: auto;
+    flex: 0 0 auto;
+    margin-top: 0.2rem;
+    font-size: 0.85rem;
+    color: {{ $primary }};
+  }
+
+  .about-details ul.ul-edu li .description p.course {
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .about-details ul.ul-edu li .description p.institution {
+    margin-top: 0.15rem;
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .dark .about-details ul.ul-edu li .description p.institution {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  /* The year leads the line so that a long institution/company name wraps
+     underneath it, rather than pushing the year onto a line of its own. */
+  .about-details .edu-year {
+    white-space: nowrap;
+  }
+
+  .about-details .edu-year::after {
+    content: "·";
+    margin: 0 0.35rem;
+  }
+</style>

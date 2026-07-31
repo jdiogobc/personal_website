@@ -1,0 +1,7 @@
+# Site-level translations. These are merged over the Academic theme's own
+# `themes/academic/i18n/en.yaml`, so only the extra/overridden keys go here.
+
+# Heading for the "Work" section added to the About widget
+# (see `layouts/partials/widgets/about.html`).
+- id: work
+  translation: Work

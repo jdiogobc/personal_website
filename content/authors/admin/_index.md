@@ -26,6 +26,20 @@ interests:
 - Interaction Design
 - Artificial Intelligence
 
+# Last 3 positions, shown as a "Work" section in the About widget.
+# Rendered by the layout override in `layouts/partials/widgets/about.html`.
+work:
+  positions:
+  - position: Technical Team Lead
+    company: UZH - Balgrist (ROCS)
+    year: 2025 - Present
+  - position: Mixed Reality Prototyper & Unity Developer
+    company: Meta - Reality Labs
+    year: 2023 - 2025
+  - position: VR Game Developer & Co-founder
+    company: Witty Platypus
+    year: 2021 - 2023
+
 education:
   courses:
   - course: Msc in Biomedical Engineering and Biophysics

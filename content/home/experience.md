@@ -27,6 +27,8 @@ date_format = "Jan 2006"
   date_end = ""
   description = """
   - Leading a team of academic researchers and engineers to develop an XR app to train surgeons 
+  - Owning the technical direction of the project, from architecture and code quality to release planning, while staying hands-on in Unity
+  - Bridging clinic and lab, translating surgeons' requirements into a roadmap that researchers and engineers can build against
   """
 [[experience]]
   title = "Mixed Reality Prototyper & Unity Developer"
@@ -51,7 +53,7 @@ date_format = "Jan 2006"
   description = """
   - Main developer and technical artist in the team of 2 that developed Beers and Boomerangs
   - Nominee for Best Game in IGN's Rogue Jam.
-  - Best Internation Indie Game at PGA awards.
+  - Best International Indie Game at PGA awards.
   - Published the game on 5 Platforms (Oculus, Pico, Steam, iQIYI, HTC)
   - Co-Founded the company 
   """
@@ -97,7 +99,7 @@ date_format = "Jan 2006"
   company_url = "https://www.glintt.com/en/Pages/home.aspx"
   location = "Lisbon - Portugal"
   date_start = "2017-08-10"
-  date_end = "2016-11-01"
+  date_end = "2017-11-01"
   description = """During this internship I shadowed and collaborated with product managers during the implementation of
   medical software in a clinical environment"""
 
