@@ -38,18 +38,21 @@ enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
-# Publish the contents of `static/Ines_easter_eggs/` at the site root, so each page
-# keeps its short URL (e.g. `/poney`) while the folders stay grouped in the repo.
-# Declaring any `static` mount replaces Hugo's default one, so `static` is re-added
-# explicitly below - minus the grouping folder, to avoid publishing it twice.
+# Publish the contents of `Ines_easter_eggs/` at the site root, so each page keeps
+# its short URL (e.g. `/poney`) while the folders stay grouped in one place.
+# Hugo ignores unknown top-level folders, so `Ines_easter_eggs/` is invisible to the
+# build until mounted here. It deliberately sits outside `static/`: nesting it there
+# would publish every page twice (once at `/poney`, once at `/Ines_easter_eggs/poney`),
+# and `excludeFiles` cannot prevent that on the pinned Hugo 0.72 - it is ignored for
+# static mounts in this version.
+# Declaring any `static` mount replaces Hugo's default one, so `static` is re-added below.
 [module]
   [[module.mounts]]
     source = "static"
     target = "static"
-    excludeFiles = "/Ines_easter_eggs/**"
 
   [[module.mounts]]
-    source = "static/Ines_easter_eggs"
+    source = "Ines_easter_eggs"
     target = "static"
 
 # Workaround Hugo publishing taxonomy URLs as plurals - consistently use singular across Academic.
