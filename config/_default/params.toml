@@ -111,10 +111,7 @@ directions = ""
 
 # Contact links
 #   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
-contact_links = [
-  {icon = "skype", icon_pack = "fab", name = "Skype Me", link = "skype:jdiogobc"},
-  {icon = "instagram", icon_pack = "fab", name = "DM me", link = "https://www.instagram.com/jdiogobc/"},
-  ]
+contact_links = []
 
 ############################
 ## Social
