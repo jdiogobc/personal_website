@@ -9,7 +9,15 @@
 
      The timeline rail is drawn with CSS (`.exp-rail`) rather than the theme's
      nested half-height Bootstrap rows, which lets the dot line up with the
-     first line of text. Styles live in `layouts/partials/custom_head.html`. */}}
+     first line of text. Styles live in `layouts/partials/custom_head.html`.
+
+     Clicking anywhere in an entry collapses/expands that role's description;
+     the dot is a real button so the same thing works from the keyboard. The
+     toggling is in `layouts/partials/custom_js.html`.
+
+     Entries render expanded and are collapsed by a `.js` class that
+     `custom_head.html` sets, so with JS off nothing is hidden behind a control
+     that would never work. */}}
 
 <div class="row">
   <div class="col-12 col-lg-4 section-heading">
@@ -24,26 +32,42 @@
     {{ $exp_len := len $page.Params.experience }}
     <div class="exp-list">
       {{ range $idx, $key := sort $page.Params.experience ".date_start" "desc" }}
-      <div class="exp-item{{ if eq $idx 0 }} is-first{{ end }}{{ if eq $idx (sub $exp_len 1) }} is-last{{ end }}">
+      <div class="exp-item{{ if .description }} exp-item--toggleable{{ end }}{{ if eq $idx 0 }} is-first{{ end }}{{ if eq $idx (sub $exp_len 1) }} is-last{{ end }}">
 
-        <div class="exp-rail" aria-hidden="true">
-          <span class="exp-dot{{ if not .date_end }} exp-dot--current{{ end }}"></span>
+        {{ $desc_id := printf "exp-desc-%d" $idx }}
+        {{ $dot_class := printf "exp-dot%s" (cond (not .date_end) " exp-dot--current" "") }}
+
+        <div class="exp-rail">
+          {{ if .description }}
+          <button type="button" class="{{ $dot_class }}" aria-expanded="true" aria-controls="{{ $desc_id }}">
+            <span class="sr-only">{{ printf "Toggle details for %s at %s" .title .company }}</span>
+          </button>
+          {{ else }}
+          <span class="{{ $dot_class }}"></span>
+          {{ end }}
         </div>
 
         {{/* An empty `date_end` means the role is current. */}}
         {{ $end := i18n "present" | default "Present" }}
         {{ with .date_end }}{{ $end = (time .).Format $date_format }}{{ end }}
 
+        {{/* Two lines rather than three: the role with its dates trailing right,
+             then where. The body is a grid, so on narrow screens the dates move
+             below the company rather than wedging between it and the title. */}}
         <div class="exp-body">
           <h4 class="exp-title">{{ .title | markdownify | emojify }}</h4>
-          <div class="exp-company">
-            {{- with .company_url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .company | markdownify | emojify }}{{ with .company_url }}</a>{{ end -}}
+          <div class="exp-dates">{{ (time .date_start).Format $date_format }} &ndash; {{ $end }}</div>
+          <div class="exp-sub">
+            <span class="exp-company">
+              {{- with .company_url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .company | markdownify | emojify }}{{ with .company_url }}</a>{{ end -}}
+            </span>
+            {{ with .location }}<span class="middot-divider"></span><span class="exp-location">{{ . }}</span>{{ end }}
           </div>
-          <div class="exp-meta">
-            {{ (time .date_start).Format $date_format }} &ndash; {{ $end }}
-            {{ with .location }}<span class="middot-divider"></span><span>{{ . }}</span>{{ end }}
+          {{ with .description }}
+          <div class="exp-desc" id="{{ $desc_id }}">
+            <div class="exp-desc-inner">{{ . | markdownify | emojify }}</div>
           </div>
-          {{ with .description }}<div class="exp-desc">{{ . | markdownify | emojify }}</div>{{ end }}
+          {{ end }}
         </div>
 
       </div>

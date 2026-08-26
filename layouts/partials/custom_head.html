@@ -6,6 +6,11 @@
 {{ $theme := index site.Data.themes $theme_name }}
 {{ $primary := $theme.primary | default "#66a1aa" }}
 
+{{/* Entries in the Experience widget render expanded and are collapsed by CSS
+     gated on this class, so that nothing is hidden when JS is unavailable.
+     It runs in <head> so the collapsed state is set before the first paint. */}}
+<script>document.documentElement.classList.add('js');</script>
+
 <style>
   /* ---------------------------------------------------------------
      Homepage section rhythm
@@ -135,20 +140,29 @@
      Markup comes from `layouts/partials/widgets/experience.html`.
      --------------------------------------------------------------- */
 
-  /* Vertical offset of a dot's centre from the top of its entry, so the dot
-     lines up with the first line of text. */
+  /* `--exp-dot-top` is a dot centre's offset from the top of its entry, so the
+     dot lines up with the first line of text.
+
+     The entry is padded so the whole block can take a hover highlight, and
+     pulled back out horizontally by the same amount so the text stays where it
+     would otherwise sit and only the highlight bleeds into the gutter.
+     `--exp-pad-x` stays under Bootstrap's 15px gutter so that bleed can't
+     cause a horizontal scrollbar. */
   .exp-list .exp-item {
     --exp-dot-top: 0.72rem;
+    --exp-pad-x: 0.7rem;
+    --exp-pad-y: 0.55rem;
+    --exp-gap: 0.5rem;
     display: flex;
     gap: 1.25rem;
+    padding: var(--exp-pad-y) var(--exp-pad-x);
+    margin: 0 calc(-1 * var(--exp-pad-x)) var(--exp-gap);
+    border-radius: 8px;
+    transition: background-color 160ms ease;
   }
 
-  .exp-list .exp-body {
-    padding-bottom: 1.6rem;
-  }
-
-  .exp-list .exp-item.is-last .exp-body {
-    padding-bottom: 0;
+  .exp-list .exp-item.is-last {
+    margin-bottom: 0;
   }
 
   /* Timeline rail. Two segments rather than one line behind the dot, so the
@@ -169,14 +183,17 @@
     opacity: 0.5;
   }
 
+  /* The rail only spans the entry's content box, so each segment is extended
+     back out through the padding - and the lower one through the gap as well -
+     to meet the next entry's segment. */
   .exp-list .exp-rail::before {
-    top: 0;
-    height: calc(var(--exp-dot-top) - 0.45rem);
+    top: calc(-1 * var(--exp-pad-y));
+    height: calc(var(--exp-pad-y) + var(--exp-dot-top) - 0.45rem);
   }
 
   .exp-list .exp-rail::after {
     top: calc(var(--exp-dot-top) + 0.45rem);
-    bottom: 0;
+    bottom: calc(-1 * (var(--exp-pad-y) + var(--exp-gap)));
   }
 
   .exp-list .exp-item.is-first .exp-rail::before,
@@ -184,25 +201,96 @@
     display: none;
   }
 
+  /* A 9px dot is far too small to click, so the button is a 26px box centred
+     on the rail and the dot itself is drawn as `::after`. */
   .exp-list .exp-dot {
     position: absolute;
     left: 50%;
     top: var(--exp-dot-top);
     transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    border: 0;
+    background: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .exp-list button.exp-dot {
+    cursor: pointer;
+  }
+
+  .exp-list .exp-dot::after {
+    content: "";
+    display: block;
     width: 9px;
     height: 9px;
     border-radius: 50%;
     border: 1px solid {{ $primary }};
+    transition: transform 160ms ease, background-color 160ms ease,
+                box-shadow 160ms ease;
   }
 
   /* The role currently held. */
-  .exp-list .exp-dot--current {
+  .exp-list .exp-dot--current::after {
     background-color: {{ $primary }};
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
   }
 
-  .dark .exp-list .exp-dot--current {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+  /* A click anywhere in the entry toggles it, so the whole entry carries the
+     affordance and hovering any part of it lights the dot. */
+  .exp-list .exp-item--toggleable {
+    cursor: pointer;
+  }
+
+  .exp-list button.exp-dot:focus-visible::after {
+    background-color: {{ $primary }};
+    transform: scale(1.4);
+    box-shadow: 0 0 0 5px {{ $primary }}40;
+  }
+
+  /* Keyboard focus lights the same block the mouse would. */
+  .exp-list .exp-item--toggleable:focus-within {
+    background-color: {{ $primary }}14;
+  }
+
+  .dark .exp-list .exp-item--toggleable:focus-within {
+    background-color: {{ $primary }}24;
+  }
+
+  /* Guarded, so the state doesn't stick after a tap on a touch screen. */
+  @media (hover: hover) {
+    .exp-list .exp-item--toggleable:hover {
+      background-color: {{ $primary }}14;
+    }
+
+    .dark .exp-list .exp-item--toggleable:hover {
+      background-color: {{ $primary }}24;
+    }
+
+    .exp-list .exp-item--toggleable:hover .exp-dot::after {
+      background-color: {{ $primary }};
+      transform: scale(1.4);
+      box-shadow: 0 0 0 5px {{ $primary }}40;
+    }
+  }
+
+  /* The company link keeps its own behaviour - clicking it navigates rather
+     than toggling. */
+  .exp-list .exp-company a {
+    cursor: pointer;
+  }
+
+  .exp-list button.exp-dot:focus {
+    outline: none;
+  }
+
+  .exp-list button.exp-dot:focus-visible::after {
+    outline: 2px solid {{ $primary }};
+    outline-offset: 4px;
   }
 
   .exp-list .exp-body {
@@ -210,17 +298,70 @@
     min-width: 0;
   }
 
+  /* Narrow screens stack in reading order - role, where, when. From `md` the
+     dates move up beside the title and align right, so they form a column and
+     each entry is two lines. An over-long title wraps rather than pushing the
+     dates out of that column. */
+  .exp-list .exp-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: baseline;
+  }
+
+  .exp-list .exp-title {
+    grid-row: 1;
+  }
+
+  .exp-list .exp-sub {
+    grid-row: 2;
+  }
+
+  .exp-list .exp-dates {
+    grid-row: 3;
+  }
+
+  .exp-list .exp-desc {
+    grid-row: 4;
+  }
+
+  @media screen and (min-width: 768px) {
+    .exp-list .exp-body {
+      grid-template-columns: minmax(0, 1fr) auto;
+      column-gap: 0.75rem;
+    }
+
+    .exp-list .exp-dates {
+      grid-row: 1;
+      grid-column: 2;
+      justify-self: end;
+      white-space: nowrap;
+    }
+
+    .exp-list .exp-sub,
+    .exp-list .exp-desc {
+      grid-column: 1 / -1;
+    }
+
+    .exp-list .exp-desc {
+      grid-row: 3;
+    }
+  }
+
   .exp-list h4.exp-title {
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.3;
-    margin: 0 0 0.1rem 0;
+    margin: 0;
+  }
+
+  /* Line two: where. */
+  .exp-list .exp-sub {
+    line-height: 1.35;
   }
 
   .exp-list .exp-company {
     font-size: 0.9rem;
     font-weight: 600 !important;
-    line-height: 1.3;
     color: {{ $primary }};
   }
 
@@ -228,33 +369,61 @@
     color: inherit;
   }
 
-  .exp-list .exp-meta {
+  .exp-list .exp-dates,
+  .exp-list .exp-location {
     font-size: 0.7rem;
     line-height: 1.4;
     color: rgba(0, 0, 0, 0.55);
   }
 
-  .dark .exp-list .exp-meta {
+  .dark .exp-list .exp-dates,
+  .dark .exp-list .exp-location {
     color: rgba(255, 255, 255, 0.6);
   }
 
+  /* `grid-template-rows: 1fr -> 0fr` animates to the content's own height,
+     with no need to measure it in JS. The inner element carries the spacing so
+     that it collapses along with the text. */
   .exp-list .exp-desc {
-    margin-top: 0.45rem;
+    display: grid;
+    grid-template-rows: 1fr;
+    transition: grid-template-rows 280ms ease;
     font-size: 0.78rem;
     line-height: 1.45;
   }
 
+  .js .exp-list .exp-item--toggleable .exp-desc {
+    grid-template-rows: 0fr;
+  }
+
+  .js .exp-list .exp-item--toggleable.is-open .exp-desc {
+    grid-template-rows: 1fr;
+  }
+
+  .exp-list .exp-desc-inner {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .exp-list .exp-item,
+    .exp-list .exp-desc,
+    .exp-list .exp-dot::after {
+      transition: none;
+    }
+  }
+
   .exp-list .exp-desc ul {
-    margin: 0;
+    margin: 0.45rem 0 0;
     padding-left: 1.1rem;
+  }
+
+  .exp-list .exp-desc p {
+    margin: 0.45rem 0 0;
   }
 
   .exp-list .exp-desc li + li {
     margin-top: 0.2rem;
-  }
-
-  .exp-list .exp-desc p:last-child {
-    margin-bottom: 0;
   }
 
   @media screen and (max-width: 575px) {

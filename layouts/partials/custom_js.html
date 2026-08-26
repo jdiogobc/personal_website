@@ -1,0 +1,44 @@
+{{/* Site-specific JS. Included by `partials/site_js.html`, after the theme bundle. */}}
+
+<script>
+  // Experience widget: clicking anywhere in an entry collapses/expands its
+  // description. Markup comes from `layouts/partials/widgets/experience.html`;
+  // the animation is CSS, driven by `.is-open` on the entry.
+  (function () {
+    var items = document.querySelectorAll('.exp-list .exp-item--toggleable');
+    var DRAG_SLOP = 4;
+
+    Array.prototype.forEach.call(items, function (item) {
+      var dot = item.querySelector('button.exp-dot');
+      var downX = 0;
+      var downY = 0;
+
+      // The markup renders expanded for the no-JS case; the `.js` class has
+      // already collapsed it by the time this runs, so correct the state the
+      // dot reports.
+      if (dot) dot.setAttribute('aria-expanded', 'false');
+
+      item.addEventListener('mousedown', function (event) {
+        downX = event.clientX;
+        downY = event.clientY;
+      });
+
+      item.addEventListener('click', function (event) {
+        // Let the company link navigate.
+        if (event.target.closest && event.target.closest('a')) return;
+
+        // A click that ends somewhere other than it started is a drag to
+        // select text, not a request to collapse what's being read. Keyboard
+        // activation reports `detail === 0` and has no meaningful coordinates.
+        if (event.detail !== 0 &&
+            (Math.abs(event.clientX - downX) > DRAG_SLOP ||
+             Math.abs(event.clientY - downY) > DRAG_SLOP)) {
+          return;
+        }
+
+        var open = item.classList.toggle('is-open');
+        if (dot) dot.setAttribute('aria-expanded', String(open));
+      });
+    });
+  })();
+</script>
