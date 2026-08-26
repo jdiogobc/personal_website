@@ -1,0 +1,54 @@
+{{ $ := .root }}
+{{ $page := .page }}
+
+{{/* Experience widget. Overrides `themes/academic/layouts/partials/widgets/experience.html`.
+
+     The theme wraps every role in a bordered card, which spends roughly 65px
+     per entry on chrome. Here each role is a plain block instead, so the space
+     goes to the content.
+
+     The timeline rail is drawn with CSS (`.exp-rail`) rather than the theme's
+     nested half-height Bootstrap rows, which lets the dot line up with the
+     first line of text. Styles live in `layouts/partials/custom_head.html`. */}}
+
+<div class="row">
+  <div class="col-12 col-lg-4 section-heading">
+    <h1>{{ with $page.Title }}{{ . | markdownify }}{{ end }}</h1>
+    {{ with $page.Params.subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
+  </div>
+  <div class="col-12 col-lg-8">
+    {{ with $page.Content }}{{ . }}{{ end }}
+
+    {{ if $page.Params.experience }}
+    {{ $date_format := $page.Params.date_format | default "January 2006" }}
+    {{ $exp_len := len $page.Params.experience }}
+    <div class="exp-list">
+      {{ range $idx, $key := sort $page.Params.experience ".date_start" "desc" }}
+      <div class="exp-item{{ if eq $idx 0 }} is-first{{ end }}{{ if eq $idx (sub $exp_len 1) }} is-last{{ end }}">
+
+        <div class="exp-rail" aria-hidden="true">
+          <span class="exp-dot{{ if not .date_end }} exp-dot--current{{ end }}"></span>
+        </div>
+
+        {{/* An empty `date_end` means the role is current. */}}
+        {{ $end := i18n "present" | default "Present" }}
+        {{ with .date_end }}{{ $end = (time .).Format $date_format }}{{ end }}
+
+        <div class="exp-body">
+          <h4 class="exp-title">{{ .title | markdownify | emojify }}</h4>
+          <div class="exp-company">
+            {{- with .company_url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .company | markdownify | emojify }}{{ with .company_url }}</a>{{ end -}}
+          </div>
+          <div class="exp-meta">
+            {{ (time .date_start).Format $date_format }} &ndash; {{ $end }}
+            {{ with .location }}<span class="middot-divider"></span><span>{{ . }}</span>{{ end }}
+          </div>
+          {{ with .description }}<div class="exp-desc">{{ . | markdownify | emojify }}</div>{{ end }}
+        </div>
+
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</div>
